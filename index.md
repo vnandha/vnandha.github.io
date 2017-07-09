@@ -2,7 +2,9 @@
 ## [Blog](https://vnandha.github.io/blog/)
 
 
-## Nandhakumar Venkatachalam
+## About Me
+
+**Nandhakumar Venkatachalam**
 
 [Linked in](https://www.linkedin.com/in/vnandha/)
 
