@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Docker For Beginners
 permalink: /blog/:year/:month/:day/:title/
 ---

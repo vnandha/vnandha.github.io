@@ -1,5 +1,5 @@
 
-# Blog
+## Blog
 
 [blog](https://vnandha.github.io/blog/)
 
