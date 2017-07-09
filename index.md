@@ -4,5 +4,6 @@
 
 ### Nandhakumar Venkatachalam
 
-[Linked in](https://www.linkedin.com/in/vnandha/)</p>
+[Linked in](https://www.linkedin.com/in/vnandha/)
+
 [Twitter](https://twitter.com/vnandha)
