@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Docker For Beginners
 permalink: /blog/:year/:month/:day/:title/
 ---

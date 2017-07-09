@@ -1,9 +1,8 @@
 
-## Blog
-
-[blog](https://vnandha.github.io/blog/)
+## [Blog](https://vnandha.github.io/blog/)
 
 
-## Nandhakumar Venkatachalam
+### Nandhakumar Venkatachalam
 
 [Linked in](https://www.linkedin.com/in/vnandha/)
+[Twitter](https://twitter.com/vnandha)
