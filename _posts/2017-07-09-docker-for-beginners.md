@@ -15,72 +15,114 @@ For MAC you could start with [Docker for Mac](https://www.docker.com/docker-mac)
 
 ## Docker commands walk through
 
-### Docker image
+### Docker image commands
 
-* List docker images
+#### List docker images
 
 {% highlight bash %}
 docker images
 {% endhighlight %}
 
-* List docker image with image sha
+#### List docker image with image sha
 
-```bash
-docker images --digests```
+{% highlight bash %}
+docker images --digests
+{% endhighlight %}
 
-# pull an image
+#### pull an image
+
+{% highlight bash %}
 docker pull nginx
+{% endhighlight %}
 
-# remove docker image
+#### remove docker image
+
+{% highlight bash %}
 docker rmi <imageid>
+{% endhighlight %}
 
-# run a container
+### Docker run commands
+
+#### Run a simple nginx container
+
+{% highlight bash %}
 docker run --name nginx-8080 -d  -p 8080:80 nginx
 
 run: runs the image as container
 --name name to the docker container
 -d run in background
 -p publish, portforward physical machines 8080 to the container port 80
+{% endhighlight %}
 
-# run another one
+#### Run another nginx container
+
+{% highlight bash %}
 docker run --name nginx-9080 -d  -p 9080:80 nginx
+{% endhighlight %}
 
-# run another variant; to run in host network
+#### Run another variant to run in host network
+
+{% highlight bash %}
 docker run --name nginx-80 -d  --network=host nginx
+{% endhighlight %}
 
-# run again
+#### Port binding issue
+
+{% highlight bash %}
 docker run --name nginx-80 -d  --network=host nginx #docker run disallow as the name is same
 docker run --name nginx-81 -d  --network=host nginx #docker would start and see what happens
+{% endhighlight %}
 
+### Working with Running containers
 
-# list docker containers
+#### List running containers
+
+{% highlight bash %}
 docker ps -a
+{% endhighlight %}
 
-# inspect
+
+#### Inspect a container
+
+{% highlight bash %}
 docker inspect <id>
+{% endhighlight %}
 
-# getting inside docker container
+#### Getting inside docker container
+
+{% highlight bash %}
 docker exec -it <id> bash
+{% endhighlight %}
 
-# start docker with interactive
+#### Run a container with interactive
+
+{% highlight bash %}
 docker run -i -t --rm=true --entrypoint=/bin/bash nginx
 
-ifconfig
+ip addr
 ctrl+d
+{% endhighlight %}
 
-# start the docker with hostnetwork
+#### Run a container with interactive hostnetwork
+
+{% highlight bash %}
 docker run -i -t --rm=true --entrypoint=/bin/bash --network=host nginx
 
-ifconfig
+ip addr
 ctrl+d
+{% endhighlight %}
 
-# execute a command directly
+#### Execute a command directly
+
+{% highlight bash %}
 docker run  --rm=true nginx  uname -a
+{% endhighlight %}
 
-# mounting the directory as volumes inside the docker you would see no such file or dir
+#### Mounting the directory as volumes inside the container
+
+{% highlight bash %}
 docker run  --rm=true nginx ls
 
 mkdir /tmp/abcd; touch /tmp/abcd/xyz
 docker run -v /tmp/abcd:/tmp/dockermount:ro  --rm=true nginx ls /tmp/dockermount
-
-# result in read only filesystem
+{% endhighlight %}
